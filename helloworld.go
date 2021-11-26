@@ -3,9 +3,12 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"helloworld/hello"
 	"os"
 	"strings"
+
+	"helloworld/shape"
+
+	"github.com/justmaker/helloworld/hello"
 )
 
 func main() {
@@ -35,4 +38,10 @@ func main() {
 	default:
 		fmt.Println("Program exit.")
 	}
+
+	c := shape.Circle{2}
+	s := shape.Square{5}
+	fmt.Println("Circle{2}.Area= ", c.Area(), "Square{5}.Area()= ", s.Area())
+
+	fmt.Scanln() // wait for Enter Key
 }
